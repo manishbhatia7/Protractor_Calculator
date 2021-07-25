@@ -13,7 +13,6 @@ describe('Calculator test', function () {
         element(by.model("first")).sendKeys("12");
         element(by.model("second")).sendKeys("12");
         element(by.id("gobutton")).click();
-        browser.sleep(2000);
         expect<any>(element(by.xpath("//h2[@class='ng-binding']")).getText()).toContain("24");
     })
 

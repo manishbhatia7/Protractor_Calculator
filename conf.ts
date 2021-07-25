@@ -1,4 +1,4 @@
-import {Config,Browser} from "protractor";
+import {Config,browser} from "protractor";
 export let config:Config=
     {
         framework:"jasmine",
@@ -6,6 +6,11 @@ export let config:Config=
             {
                 browserName:'chrome'
             },
-        specs:['./specs/calculator.js']
+        specs:['./specs/calculator.js'],
+        onPrepare:function()
+        {
+            browser.manage().timeouts().implicitlyWait(5000);
+
+        }
 
     }
