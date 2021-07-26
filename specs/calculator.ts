@@ -1,4 +1,5 @@
 import {browser, by, element} from "protractor";
+import {log4jsconfig} from "../config/log4jsconfig";
 
 describe('Calculator test', function () {
     beforeEach(function ()
@@ -8,6 +9,12 @@ describe('Calculator test', function () {
     })
     it('Launch Url Check ', function () {
         expect(browser.getTitle()).toContain("Super");
+        let browsertitle=browser.getTitle();
+        browsertitle.then(function(txt)
+        {
+            console.log("Browser title:-"+txt);
+            log4jsconfig.Log().debug("Browser title:-"+txt);
+        })
     });
     it('Perform Calculator functions',function () {
         element(by.model("first")).sendKeys("12");

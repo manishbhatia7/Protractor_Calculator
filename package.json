@@ -17,6 +17,7 @@
     "@types/node": "^16.4.2",
     "jasmine": "~3.0.0",
     "protractor": "~7.0.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "log4js": "^6.3.0"
   }
 }
